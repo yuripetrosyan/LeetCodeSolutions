@@ -1,15 +1,15 @@
 class Solution {
     func numOfStrings(_ patterns: [String], _ word: String) -> Int {
 
-        var finalArray: [String] = []
+        var count = 0
 
         for i in patterns{
             if word.contains(i) {
-                finalArray.append(i)
+                count += 1
             }
         }
 
-        return finalArray.count
+        return count
         
     }
 }

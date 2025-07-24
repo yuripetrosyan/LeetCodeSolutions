@@ -6,9 +6,7 @@ class Solution {
         counts[num, default: 0] += 1
      }
 
-     let values = Array(counts.values)
-
-     let result =  values.map {($0 * ($0 - 1)) / 2}
+     let result =  counts.values.map {($0 * ($0 - 1)) / 2}
 
      return result.reduce(0, +)
 

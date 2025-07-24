@@ -3,7 +3,7 @@ class Solution {
         var x = 0
 
         for i in operations{
-            if i == "--X" || i == "X--"{
+            if i.contains("-"){
                 x -= 1
             } else {
                 x += 1

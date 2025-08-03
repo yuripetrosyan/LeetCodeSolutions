@@ -3,7 +3,7 @@ class Solution {
         s
         .split(separator: " ")
         .sorted { $0.last! < $1.last! }
-        .map{$0.dropLast()}
+        .map{String($0.dropLast())}
         .joined(separator: " ")
      
     }

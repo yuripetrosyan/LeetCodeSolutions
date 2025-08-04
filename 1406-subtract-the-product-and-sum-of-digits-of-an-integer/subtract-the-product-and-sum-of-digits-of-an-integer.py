@@ -1,15 +1,16 @@
 class Solution:
     def subtractProductAndSum(self, n: int) -> int:
+        s = str(n)
 
-        productD = 1
-        strN = str(n)
-        sumD = 0
+        multiple = 1
+        total = 0
 
-        for digit in range(0, len(strN)):
-            productD *= int(strN[digit])
-            sumD += int(strN[digit])
+        for digit in s:
+            v = int(digit)
+            multiple *= v
+            total += v
 
-        return productD - sumD
+        return multiple - total
 
 
 

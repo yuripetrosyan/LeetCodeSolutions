@@ -1,10 +1,9 @@
 class Solution:
     def findChampion(self, grid: List[List[int]]) -> int:
 
-        arr = []
+        arr = [sum(i) for i in grid]
 
-        for i in grid:
-            arr.append(sum(i))
+    
 
         return arr.index(max(arr))
             

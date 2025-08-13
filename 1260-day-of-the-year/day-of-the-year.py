@@ -7,19 +7,17 @@ class Solution:
 
         daysInLeapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-        arr = date.split("-")
+        Y, M, D = map(int, date.split("-"))
 
 
-        for i in range(int(arr[1])- 1):
-            if (int(arr[0]) % 4 == 0 and int(arr[0]) % 100 != 0) or (int(arr[0]) % 400 == 0):
+        for i in range(M - 1):
+            if (Y % 4 == 0 and Y % 100 != 0) or (Y % 400 == 0):
                 res += daysInLeapYear[i]
             else:
                 res += daysInMonth[i]
 
-        res += int(arr[2])
-
-        
-           
+        res += D
+          
 
         return res 
 
